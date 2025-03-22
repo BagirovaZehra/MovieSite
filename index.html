@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Movie Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header>
+                <h1>MovieLoom</h1>
+                <button id="menu-toggle">☰</button>
+
+                <nav>
+                    <ul id="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./about/about.html">About</a></li>
+                        <li><a href="./contact/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <button id="theme-toggle">🌙</button>
+            </header>
+                <section id="genre-filter-section">
+                <div>
+                    <label for="genre-filter">Filter by Genre:</label>
+                    <select id="genre-filter">
+                        <option value="">All Genres</option>
+                    </select>
+                </div>
+                <div class="search-filter">
+                    <input type="text" placeholder="Search Film...">
+                </div>
+            </section>
+    
+            <main>
+                <section id="movie-container">
+                    <!-- Movies will be added here -->
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

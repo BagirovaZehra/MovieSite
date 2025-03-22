@@ -1,0 +1,354 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+#about {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#about h2, #about h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.light-mode #about {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.light-mode #about h2, 
+.light-mode #about h3 {
+    color: #ff9800;
+}
+
+.light-mode #about p {
+    color: #444;
+}
+
+body.light-mode {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+nav {
+    width: 50%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 5px 0;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background-color: #ffcc00;
+    transition: width 0.4s ease-out, left 0.4s ease-out;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+    left: 0;
+}
+/* Wrapper */
+.wrapper {
+    max-width: 1200px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-bottom: 1px solid #333;
+}
+
+header.light-mode {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+header.light-mode nav ul li a {
+    color: #333;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+main {
+    padding: 40px 0;
+}
+
+#about {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+#about.light-mode {
+    background-color: #f4f4f4;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+#about.light-mode h2 {
+    color: #f39c12;
+}
+
+#about h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #f39c12;
+}
+
+#about.light-mode h3 {
+    color: #f39c12;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+    margin-top: 40px;
+}
+
+.light-mode footer {
+    background-color: #f7f7f7;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-mode header {
+    background-color: #f5f5f5;
+    color: #000000;
+}
+
+.light-mode nav ul li a {
+    color: #000000;
+}
+
+.light-mode .movie-card {
+    background-color: #f0f0f0;
+    color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.search-filter input{
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.goals-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.goal-box {
+    width: 70%;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.goal-box:hover {
+    transform: scale(1.05);
+    background-color: #292929;
+}
+
+/* Goal Box Text */
+.goal-box h4 {
+    font-size: 1.3rem;
+    color: #f39c12;
+}
+
+.goal-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* Light Mode üçün Goal Boxes */
+.light-mode .goal-box {
+    background-color: #f7f7f7;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.light-mode .goal-box:hover {
+    background-color: #f0f0f0;
+}
+
+.light-mode .goal-box h4 {
+    color: #ff9800;
+}
+
+.light-mode .goal-box p {
+    color: #444;
+    
+}
+#menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 13%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width:1125px){
+    .goals-container {
+        flex-wrap: wrap;
+    }
+    .goal-box{
+        width: 35%;
+    }
+}
+@media screen and (max-width:600px){
+    #menu-toggle {
+        display: block;
+    }
+    .light-mode #menu-toggle {
+        color: black;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #1e1e1e;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+        margin-top: 4%;
+        width: 92%;
+        margin-left: 4%;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+    .light-mode nav ul {
+        background-color: #f7f7f7; 
+    }
+
+    .light-mode nav ul li a {
+        color: black; 
+    }
+    .goal-box{
+        width: 80%;
+    }
+    .goal-box h4{
+        font-size: 1.8em;
+    }
+    .goal-box p {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width:498px){
+    header h1{
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width:390px){
+    header h1{
+        font-size: 1.3rem;
+    }
+    #menu-toggle{
+        left: 60%;
+    }
+    .goal-box{
+        width: 85%;
+    }
+}

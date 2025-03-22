@@ -1,0 +1,247 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    width: 50%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 5px 0;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background-color: #ffcc00;
+    transition: width 0.4s ease-out, left 0.4s ease-out;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+#genre-filter-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#genre-filter {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#genre-filter-section button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+    background-color: #ffcc00;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#genre-filter-section button:hover {
+    background-color: #e6b800;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+#movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.movie-card {
+    width: 200px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.movie-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.movie-card p {
+    font-size: 0.9rem;
+    color: #bbbbbb;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-mode header {
+    background-color: #f5f5f5;
+    color: #000000;
+}
+
+.light-mode nav ul li a {
+    color: #000000;
+}
+
+.light-mode .movie-card {
+    background-color: #f0f0f0;
+    color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-filter input{
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#genre-filter option {
+    color: black;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 600px) {
+    #menu-toggle {
+        display: block;
+    }
+    .light-mode #menu-toggle {
+        color: black;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #1e1e1e;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+    .light-mode nav ul {
+        background-color: #f7f7f7; 
+    }
+
+    .light-mode nav ul li a {
+        color: black; 
+    }
+    #genre-filter-section{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    #genre-filter-section div{
+       width: 60%;
+    }
+    #genre-filter{
+        width: 90%;
+    }
+    .search-filter input{
+        width: 88%;
+    }
+}
+@media screen and (max-width:540px){
+    .movie-card{
+        width: 80%;
+    }
+    header h1{
+        font-size: 1.1em;
+    }
+}
